@@ -1,0 +1,27 @@
+class MyException extends Exception{
+    MyException(String str){
+    super(str);
+        
+    }
+}
+class Main{
+   static int fun(int x,int y) throws MyException{
+       if(x==y)
+       
+       throw new MyException("as x is"+x+" and y is "+y+" are same \n");
+        
+        return 2*x+y;
+    }
+    
+    public static void main(String[] args){
+        
+        try{
+        System.out.println(fun(5,9));
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        
+        System.out.println("other code ");
+        }
+    }
